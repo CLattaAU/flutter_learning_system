@@ -88,9 +88,12 @@ class _Challenge001State extends State<Challenge001> {
               child: Text('Clear'),
             ),
             SizedBox(width: 10.0),
-            FloatingActionButton(
-              onPressed: addItem,
-              child: const Icon(Icons.add, size: 20.0),
+            GestureDetector(
+              onLongPress: clearList,
+              child: FloatingActionButton(
+                onPressed: addItem,
+                child: const Icon(Icons.add, size: 20.0),
+              ),
             ),
           ],
         ),
